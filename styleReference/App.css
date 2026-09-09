@@ -1,0 +1,99 @@
+.appShell {
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 90% 12%, rgba(238, 115, 93, 0.16), transparent 25rem), #f4f0e8;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(16rem, 0.8fr);
+  gap: 1.25rem;
+  width: min(70rem, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.profileControls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.profileControls h1 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.userSelectLabel {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 11rem;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.userSelectLabel select {
+  min-height: 2.8rem;
+  padding: 0.65rem 2.2rem 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.listPanel {
+  align-self: end;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: rgba(255, 253, 248, 0.76);
+  box-shadow: 0 1rem 2.5rem rgba(25, 52, 58, 0.07);
+}
+
+.sectionHeading {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.6rem;
+  padding-bottom: 1rem;
+}
+
+.eyebrow {
+  color: var(--coral);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sectionHeading h2 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1;
+}
+
+@media (max-width: 680px) {
+  .content {
+    grid-template-columns: 1fr;
+    width: min(100% - 2rem, 34rem);
+    padding-top: 2rem;
+  }
+
+  .profileControls {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .listPanel {
+    align-self: auto;
+  }
+}

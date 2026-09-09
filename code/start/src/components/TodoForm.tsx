@@ -16,9 +16,19 @@ const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="text" placeholder="Add a new todo..." />
-      <button type="submit">Add</button>
+    <form onSubmit={handleSubmit} className="flex gap-3">
+      <input
+        type="text"
+        name="text"
+        placeholder="Add a new todo..."
+        className="min-w-0 flex-1 border border-[rgba(25,52,58,0.14)] bg-white px-3 py-2 text-[#19343a] outline-none placeholder:text-[#637477] focus:border-[#ee735d]"
+      />
+      <button
+        type="submit"
+        className="bg-[#ee735d] px-4 py-2 font-bold text-white transition hover:bg-[#d95f4b] focus:outline-2 focus:outline-offset-2 focus:outline-[#ee735d]"
+      >
+        Add
+      </button>
     </form>
   );
 };

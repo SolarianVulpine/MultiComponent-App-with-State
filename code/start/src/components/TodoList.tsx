@@ -13,16 +13,30 @@ const TodoList = () => {
   };
 
   return (
-    <ul>
+    <ul className="mt-6 divide-y divide-[rgba(25,52,58,0.14)]">
       {todos.map((todo) => (
-        <li key={todo.id}>
-          <span
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+        <li
+          key={todo.id}
+          className="flex items-center justify-between gap-4 py-4"
+        >
+          <button
+            type="button"
             onClick={() => handleToggle(todo.id)}
+            className={`min-w-0 flex-1 text-left ${todo.completed
+                ? "text-[#637477] line-through"
+                : "text-[#19343a]"
+              }`}
           >
             {todo.text}
-          </span>
-          <button onClick={() => handleDelete(todo.id)}>Delete</button>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleDelete(todo.id)}
+            className="shrink-0 text-sm font-bold text-[#637477] hover:text-[#ee735d]"
+          >
+            Delete
+          </button>
         </li>
       ))}
     </ul>

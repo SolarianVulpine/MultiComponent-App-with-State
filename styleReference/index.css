@@ -1,13 +1,10 @@
-@import "tailwindcss";
-
 :root {
-  font-family: "Rajdhani", system-ui, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   color: #19343a;
   background: #f4f0e8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-
   --ink: #19343a;
   --muted: #637477;
   --paper: #fffdf8;
@@ -15,12 +12,12 @@
   --line: rgba(25, 52, 58, 0.14);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
 }
