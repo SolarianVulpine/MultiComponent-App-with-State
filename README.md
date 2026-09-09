@@ -35,25 +35,25 @@ We need to:
 We need to implement the following functionalities:
 
 1. **Global State Management:**
-   
+
    - Create a Zustand store (`todoStore`) to manage the list of todos, including actions for adding, toggling, and deleting tasks.
 
 2. **Reusable Components:**
-   
+
    - Implement a `TodoForm` component for adding new tasks.
    - Implement a `TodoList` component for displaying and managing existing tasks.
 
 3. **Component Architecture:**
-   
+
    - Use TypeScript to enforce type checks for props and state across components.
    - Ensure components are modular and reusable.
 
 4. **Styling with Tailwind CSS:**
-   
+
    - Style the application using Tailwind CSS for a clean and responsive design.
 
 5. **Testing:**
-   
+
    - Write unit tests for the Zustand store to validate state updates.
    - Write integration tests for components to ensure proper rendering and user interactions.
    - Mock Zustand hooks in component tests to isolate and test individual components.
