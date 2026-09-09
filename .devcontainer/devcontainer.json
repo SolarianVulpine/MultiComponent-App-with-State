@@ -1,13 +1,13 @@
 {
   "name": "assignment-create-a-multi-component-app-with-state",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-22-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22-bullseye",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"
     }
   },
   "forwardPorts": [5173],
-  "postCreateCommand": "npm create vite@latest zustand-todo --template react-ts && cd zustand-todo && npm install && npm install zustand tailwindcss @tailwindcss/vite @testing-library/react @testing-library/jest-dom vitest @types/jest -D ",
+  "postCreateCommand": "cd code/start && npm install && npm install zustand tailwindcss @tailwindcss/vite @testing-library/react @testing-library/jest-dom vitest @types/jest -D ",
   "remoteUser": "node",
   "customizations": {
     "vscode": {
@@ -18,5 +18,4 @@
       ]
     }
   }
-
 }
