@@ -28,15 +28,15 @@ describe('TodoList', () => {
         it('renders todos and shows completed styling', () => {
                 render(<TodoList />);
 
-                expect(screen.getByRole('button', { name: 'Finish assignment' })).toBeVisible();
-                expect(screen.getByRole('button', { name: 'Review tests' })).toHaveClass('line-through');
+                screen.getByRole('checkbox', { name: 'Complete Finish assignment' });
+                expect(screen.getByText('Review tests')).toHaveClass('line-through');
         });
 
         it('toggles and deletes the selected todo', () => {
                 render(<TodoList />);
 
-                fireEvent.click(screen.getByRole('button', { name: 'Finish assignment' }));
-                fireEvent.click(screen.getAllByRole('button', { name: 'Delete' })[1]);
+                fireEvent.click(screen.getByRole('checkbox', { name: 'Complete Finish assignment' }));
+                fireEvent.click(screen.getByRole('button', { name: 'Delete Review tests' }));
 
                 expect(toggleTodo).toHaveBeenCalledWith(1);
                 expect(deleteTodo).toHaveBeenCalledWith(2);
